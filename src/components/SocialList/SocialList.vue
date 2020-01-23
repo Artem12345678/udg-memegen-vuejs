@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import SocialListItem from '../SocialListItem/SocialListItem.vue';
+import SocialListItem from '@/components/SocialListItem/SocialListItem.vue';
 
 export default {
   name: 'SocialList',
@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
   .social {
     display: flex;
     list-style-type: none;

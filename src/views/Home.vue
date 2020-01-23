@@ -1,12 +1,16 @@
 <template>
   <div class="home">
-    <p>TEST</p>
+    <MemeGen/>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'home',
+import MemeGen from '@/components/MemeGen/MemeGen.vue';
 
+export default {
+  name: 'Home',
+  components: {
+    MemeGen,
+  },
 };
 </script>

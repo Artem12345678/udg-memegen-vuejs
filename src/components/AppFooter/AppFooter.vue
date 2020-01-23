@@ -18,14 +18,14 @@
 import SocialList from '@/components/SocialList/SocialList.vue';
 
 export default {
-  name: 'Footer',
+  name: 'AppFooter',
   components: {
     SocialList,
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .footer {
     padding: 30px 0;
 
