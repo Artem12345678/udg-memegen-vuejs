@@ -1,6 +1,6 @@
 <template>
   <a class="social__link" :href="url" target="_blank">
-    <img :src="image">
+    <img :src="image" />
   </a>
 </template>
 
@@ -20,21 +20,21 @@ export default {
 </script>
 
 <style lang="scss">
-  .social__link {
-    display: flex;
-    width: 28px;
-    height: 28px;
-    transition: border-color .25s ease-in-out;
-    text-align: center;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
+.social__link {
+  display: flex;
+  width: 28px;
+  height: 28px;
+  transition: border-color 0.25s ease-in-out;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
 
-    &:focus,
-    &:active,
-    &:hover {
-      border-color: #fff;
-    }
+  &:focus,
+  &:active,
+  &:hover {
+    border-color: #fff;
   }
+}
 </style>

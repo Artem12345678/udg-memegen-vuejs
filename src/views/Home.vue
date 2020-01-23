@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <MemeGen/>
+    <MemeGen />
   </div>
 </template>
 

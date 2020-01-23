@@ -1,12 +1,12 @@
 <template>
   <div id="app">
-    <AppHeader/>
+    <AppHeader />
 
     <main class="container">
-      <router-view/>
+      <router-view />
     </main>
 
-    <AppFooter/>
+    <AppFooter />
   </div>
 </template>
 
@@ -24,13 +24,13 @@ export default {
 </script>
 
 <style lang="scss">
-  #app {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+#app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  main {
-    flex-grow: 1;
-  }
+main {
+  flex-grow: 1;
+}
 </style>

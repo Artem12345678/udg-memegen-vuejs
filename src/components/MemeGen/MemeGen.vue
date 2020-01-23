@@ -5,48 +5,59 @@
     <div class="app__toolbar">
       <div class="form-row">
         <b-input-group prepend="File" class="col-lg-4 app__control">
-          <b-form-file @change="onFileChangeHandler" accept="image/jpeg,image/png,image/gif"
-                      placeholder="Select"></b-form-file>
+          <b-form-file
+            @change="onFileChangeHandler"
+            accept="image/jpeg,image/png,image/gif"
+            placeholder="Select"
+          />
         </b-input-group>
 
         <b-input-group prepend="Top Text" class="col-lg-4 app__control">
-          <b-form-input v-model="topText"></b-form-input>
+          <b-form-input v-model="topText" />
         </b-input-group>
 
         <b-input-group prepend="Bottom Text" class="col-lg-4 app__control">
-          <b-form-input v-model="bottomText"></b-form-input>
+          <b-form-input v-model="bottomText" />
         </b-input-group>
       </div>
 
       <div class="form-row">
         <b-input-group prepend="Font" class="col-lg-4 app__control">
-           <b-form-select v-model="fontFamily" :options="fontFamilyOptions"></b-form-select>
+          <b-form-select v-model="fontFamily" :options="fontFamilyOptions" />
         </b-input-group>
 
-        <verte ref="verte" value="#f0f" @input="fontColor = $event" picker="square"
-              model="rgb"></verte>
+        <verte ref="verte" value="#f0f" @input="fontColor = $event" picker="square" model="rgb" />
         <div class="input-group col-lg-4 app__control">
           <div class="input-group-prepend">
             <label class="input-group-text" for="color">Color</label>
           </div>
-          <input class="form-control colorpicker-element" type="text" @click="toggleColorPicker"
-                :value="fontColor">
+          <input
+            class="form-control colorpicker-element"
+            type="text"
+            @click="toggleColorPicker"
+            :value="fontColor"
+          />
         </div>
 
         <b-input-group prepend="Font Size" class="col-lg-4 app__control">
-          <b-form-input style="flex-grow: 1; width: auto;" type="range" min="15" max="50"
-                v-model="fontSize"></b-form-input>
+          <b-form-input
+            style="flex-grow: 1; width: auto;"
+            type="range"
+            min="15"
+            max="50"
+            v-model="fontSize"
+          />
         </b-input-group>
       </div>
     </div>
 
     <div class="app__canvas">
-      <canvas ref="canvas" id="canvas" width="491" height="550"></canvas>
+      <canvas ref="canvas" id="canvas" width="491" height="550" />
     </div>
 
     <div class="app__save">
       <b-input-group class="col-lg-6 app__control">
-        <b-form-select v-model="mimeType" :options="mimeTypeOptions"></b-form-select>
+        <b-form-select v-model="mimeType" :options="mimeTypeOptions" />
 
         <template v-slot:append>
           <b-button @click="onSaveHandler" variant="info">Save As</b-button>
@@ -58,15 +69,15 @@
       <div class="row">
         <div class="col-md-4" v-for="(item, index) in results" :key="index">
           <div class="card mb-5">
-            <img class="card-img-top" alt="A custom meme" :src="item.imageUrl">
+            <img class="card-img-top" alt="A custom meme" :src="item.imageUrl" />
             <div class="card-body">
-              <p class="card-text">Top Text: {{item.topText}}</p>
-              <p class="card-text">Bottom Text: {{item.bottomText}}</p>
+              <p class="card-text">Top Text: {{ item.topText }}</p>
+              <p class="card-text">Bottom Text: {{ item.bottomText }}</p>
               <a :href="item.imageUrl" download="meme" class="btn btn-success">Download</a>
               <button @click="onDeleteHandler(index)" class="btn btn-danger">Delete</button>
             </div>
           </div>
-      </div>
+        </div>
       </div>
     </div>
   </div>
@@ -100,14 +111,6 @@ export default {
     };
   },
 
-  mounted() {
-    this.render();
-  },
-
-  updated() {
-    this.render();
-  },
-
   computed: {
     canvasElement() {
       return this.$refs.canvas;
@@ -116,6 +119,14 @@ export default {
     canvasContext() {
       return this.canvasElement.getContext('2d');
     },
+  },
+
+  mounted() {
+    this.render();
+  },
+
+  updated() {
+    this.render();
   },
 
   methods: {
@@ -141,7 +152,7 @@ export default {
       let snapshot;
 
       if (this.mimeType === 'image/gif') {
-      // eslint-disable-next-line no-undef
+        // eslint-disable-next-line no-undef
         const gif = new GIF({
           workers: 2,
           quality: 10,
@@ -149,7 +160,7 @@ export default {
 
         gif.addFrame(this.canvasElement, { delay: 200 });
 
-        gif.on('finished', (blob) => {
+        gif.on('finished', blob => {
           const reader = new FileReader();
 
           reader.onload = () => {
@@ -194,11 +205,7 @@ export default {
         this.canvasContext.textBaseline = 'middle';
         this.canvasContext.font = `${this.fontSize}px ${this.fontFamily}`;
         this.canvasContext.fillStyle = this.fontColor;
-        this.canvasContext.fillText(
-          this.topText,
-          this.canvasElement.width / 2,
-          50,
-        );
+        this.canvasContext.fillText(this.topText, this.canvasElement.width / 2, 50);
         this.canvasContext.fillText(
           this.bottomText,
           this.canvasElement.width / 2,
@@ -214,52 +221,52 @@ export default {
 </script>
 
 <style lang="scss">
-  #canvas {
-    max-width: 100%;
-    max-height: 100%;
+#canvas {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.googleFontFix {
+  font-family: 'Pacifico', cursive;
+
+  position: absolute;
+
+  visibility: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.verte__guide {
+  display: none !important;
+}
+
+.app {
+  &__control {
+    margin-top: 1.5rem;
   }
 
-  .googleFontFix {
-    font-family: 'Pacifico', cursive;
+  &__canvas {
+    display: flex;
 
-    position: absolute;
+    margin-top: 1rem;
+    padding: 20px;
 
-    visibility: hidden;
-    clip: rect(0 0 0 0);
-
-    width: 1px;
-    height: 1px;
-    margin: -1px;
+    justify-content: center;
+    align-items: center;
   }
 
-  .verte__guide {
-    display: none !important;
+  &__save {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
   }
 
-  .app {
-    &__control {
-      margin-top: 1.5rem;
-    }
-
-    &__canvas {
-      display: flex;
-
-      margin-top: 1rem;
-      padding: 20px;
-
-      justify-content: center;
-      align-items: center;
-    }
-
-    &__save {
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-    }
-
-    &__results {
-      margin-top: 2.5rem;
-    }
+  &__results {
+    margin-top: 2.5rem;
   }
+}
 </style>

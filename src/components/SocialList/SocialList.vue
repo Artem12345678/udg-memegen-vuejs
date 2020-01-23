@@ -1,7 +1,7 @@
 <template>
   <ul class="social">
     <li v-for="(item, index) in links" :key="index" class="social__item">
-      <SocialListItem :url="item.url" :icon="item.icon"/>
+      <SocialListItem :url="item.url" :icon="item.icon" />
     </li>
   </ul>
 </template>
@@ -32,19 +32,19 @@ export default {
 </script>
 
 <style lang="scss">
-  .social {
-    display: flex;
-    list-style-type: none;
+.social {
+  display: flex;
+  list-style-type: none;
 
-    &__item {
-      position: relative;
-      z-index: 1;
-      display: inline-block;
-      margin-right: 10px;
+  &__item {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-right: 10px;
 
-      &:last-child {
-        margin-right: 0;
-      }
+    &:last-child {
+      margin-right: 0;
     }
   }
+}
 </style>

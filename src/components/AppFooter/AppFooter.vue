@@ -7,7 +7,7 @@
         </b-nav>
 
         <div class="footer__social">
-          <SocialList/>
+          <SocialList />
         </div>
       </div>
     </div>
@@ -26,24 +26,24 @@ export default {
 </script>
 
 <style lang="scss">
-  .footer {
-    padding: 30px 0;
+.footer {
+  padding: 30px 0;
 
-    &__nav {
-      display: flex;
-      justify-content: space-between;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.nav-link {
+  &--footer {
+    color: #fff;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: darken(#fff, 10%);
     }
   }
-
-  .nav-link {
-    &--footer {
-      color: #fff;
-
-      &:hover,
-      &:focus,
-      &:active {
-        color: darken(#fff, 10%)
-      }
-    }
-  }
+}
 </style>
