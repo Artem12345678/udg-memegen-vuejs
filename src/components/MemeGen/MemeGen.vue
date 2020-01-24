@@ -32,7 +32,8 @@
             <label class="input-group-text" for="color">Color</label>
           </div>
           <input
-            class="form-control colorpicker-element"
+            class="form-control"
+            readonly
             type="text"
             @click="toggleColorPicker"
             :value="fontColor"
@@ -52,7 +53,7 @@
     </div>
 
     <div class="app__canvas">
-      <canvas ref="canvas" id="canvas" width="491" height="550" />
+      <canvas ref="canvas" id="canvas" />
     </div>
 
     <div class="app__save">
