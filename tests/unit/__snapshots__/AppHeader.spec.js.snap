@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppHeader.vue matches snapshot 1`] = `
+<header
+  class="header bg-primary"
+>
+  <div
+    class="container"
+  >
+    <b-navbar-stub
+      tag="nav"
+      toggleable="lg"
+      type="dark"
+    >
+      <b-navbar-brand-stub
+        class="brand"
+        event="click"
+        routertag="a"
+        tag="div"
+        target="_self"
+        to="/"
+      >
+        MemeGen
+      </b-navbar-brand-stub>
+       
+      <b-navbar-toggle-stub
+        label="Toggle navigation"
+        target="nav-collapse"
+      />
+       
+      <b-collapse-stub
+        id="nav-collapse"
+        isnav="true"
+        tag="div"
+      >
+        <b-navbar-nav-stub
+          class="ml-auto"
+          tag="ul"
+        >
+          <b-nav-item-stub
+            event="click"
+            routertag="a"
+            target="_self"
+            to="/"
+          >
+            Home
+          </b-nav-item-stub>
+        </b-navbar-nav-stub>
+      </b-collapse-stub>
+    </b-navbar-stub>
+  </div>
+</header>
+`;

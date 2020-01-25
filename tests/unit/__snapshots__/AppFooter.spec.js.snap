@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppFooter.vue matches snapshot 1`] = `
+<footer
+  class="footer bg-secondary"
+>
+  <div
+    class="container"
+  >
+    <div
+      class="footer__nav"
+    >
+      <b-nav-stub
+        tag="ul"
+      >
+        <b-nav-item-stub
+          event="click"
+          linkclasses="nav-link--footer"
+          routertag="a"
+          target="_self"
+          to="/"
+        >
+          Home
+        </b-nav-item-stub>
+      </b-nav-stub>
+       
+      <div
+        class="footer__social"
+      >
+        <sociallist-stub />
+      </div>
+    </div>
+  </div>
+</footer>
+`;

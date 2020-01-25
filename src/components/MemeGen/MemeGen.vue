@@ -9,21 +9,22 @@
             @change="onFileChangeHandler"
             accept="image/jpeg,image/png,image/gif"
             placeholder="Select"
+            name="file"
           />
         </b-input-group>
 
         <b-input-group prepend="Top Text" class="col-lg-4 app__control">
-          <b-form-input v-model="topText" />
+          <b-form-input v-model="topText" name="topText" />
         </b-input-group>
 
         <b-input-group prepend="Bottom Text" class="col-lg-4 app__control">
-          <b-form-input v-model="bottomText" />
+          <b-form-input v-model="bottomText" name="bottomText" />
         </b-input-group>
       </div>
 
       <div class="form-row">
         <b-input-group prepend="Font" class="col-lg-4 app__control">
-          <b-form-select v-model="fontFamily" :options="fontFamilyOptions" />
+          <b-form-select v-model="fontFamily" :options="fontFamilyOptions" name="fontFamily" />
         </b-input-group>
 
         <verte ref="verte" value="#f0f" @input="fontColor = $event" picker="square" model="rgb" />
@@ -37,6 +38,7 @@
             type="text"
             @click="toggleColorPicker"
             :value="fontColor"
+            name="fontColor"
           />
         </div>
 
@@ -47,6 +49,7 @@
             min="15"
             max="50"
             v-model="fontSize"
+            name="fontSize"
           />
         </b-input-group>
       </div>
@@ -58,10 +61,10 @@
 
     <div class="app__save">
       <b-input-group class="col-lg-6 app__control">
-        <b-form-select v-model="mimeType" :options="mimeTypeOptions" />
+        <b-form-select v-model="mimeType" :options="mimeTypeOptions" name="mimeType" />
 
         <template v-slot:append>
-          <b-button @click="onSaveHandler" variant="info">Save As</b-button>
+          <b-button @click="onSaveHandler" name="save" variant="info">Save As</b-button>
         </template>
       </b-input-group>
     </div>

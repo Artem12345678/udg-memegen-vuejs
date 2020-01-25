@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SocialList.vue matches snapshot 1`] = `
+<ul
+  class="social"
+>
+  <li
+    class="social__item"
+  >
+    <sociallistitem-stub
+      icon="github"
+      url="https://www.github.com/Artem12345678"
+    />
+  </li>
+  <li
+    class="social__item"
+  >
+    <sociallistitem-stub
+      icon="instagram"
+      url="https://www.instagram.com/ystimenkoartem"
+    />
+  </li>
+</ul>
+`;

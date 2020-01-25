@@ -1,0 +1,496 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MemeGen.vue matches snapshot 1`] = `
+<div
+  class="app"
+>
+  <div
+    class="googleFontFix"
+  >
+    Fix
+  </div>
+   
+  <div
+    class="app__toolbar"
+  >
+    <div
+      class="form-row"
+    >
+      <div
+        class="input-group col-lg-4 app__control"
+        role="group"
+      >
+        <div
+          class="input-group-prepend"
+        >
+          <div
+            class="input-group-text"
+          >
+            File
+          </div>
+          <!---->
+        </div>
+        <div
+          class="custom-file b-form-file"
+          id="__BVID__4__BV_file_outer_"
+        >
+          <input
+            accept="image/jpeg,image/png,image/gif"
+            class="custom-file-input"
+            id="__BVID__4"
+            name="file"
+            type="file"
+          />
+          <label
+            class="custom-file-label"
+            data-browse="Browse"
+            for="__BVID__4"
+          >
+            Select
+          </label>
+        </div>
+        <!---->
+      </div>
+       
+      <div
+        class="input-group col-lg-4 app__control"
+        role="group"
+      >
+        <div
+          class="input-group-prepend"
+        >
+          <div
+            class="input-group-text"
+          >
+            Top Text
+          </div>
+          <!---->
+        </div>
+        <input
+          class="form-control"
+          id="__BVID__5"
+          name="topText"
+          type="text"
+        />
+        <!---->
+      </div>
+       
+      <div
+        class="input-group col-lg-4 app__control"
+        role="group"
+      >
+        <div
+          class="input-group-prepend"
+        >
+          <div
+            class="input-group-text"
+          >
+            Bottom Text
+          </div>
+          <!---->
+        </div>
+        <input
+          class="form-control"
+          id="__BVID__6"
+          name="bottomText"
+          type="text"
+        />
+        <!---->
+      </div>
+    </div>
+     
+    <div
+      class="form-row"
+    >
+      <div
+        class="input-group col-lg-4 app__control"
+        role="group"
+      >
+        <div
+          class="input-group-prepend"
+        >
+          <div
+            class="input-group-text"
+          >
+            Font
+          </div>
+          <!---->
+        </div>
+        <select
+          class="custom-select"
+          id="__BVID__7"
+          name="fontFamily"
+        >
+          <option
+            disabled="disabled"
+            value=""
+          >
+            Choose...
+          </option>
+          <option
+            value="Arial"
+          >
+            Arial
+          </option>
+          <option
+            value="Comic Sans MS"
+          >
+            Comic Sans MS
+          </option>
+          <option
+            value="Pacifico"
+          >
+            Pacifico
+          </option>
+        </select>
+        <!---->
+      </div>
+       
+      <div
+        class="verte"
+      >
+        <button
+          class="verte__guide"
+          style="color: rgb(255, 0, 255); fill: rgb(255,0,255);"
+          type="button"
+        >
+          <svg
+            class="verte__icon"
+            viewBox="0 0 24 24"
+          >
+            <pattern
+              fill="FFF"
+              height="6"
+              id="checkerboard"
+              patternUnits="userSpaceOnUse"
+              width="6"
+            >
+              <rect
+                fill="#7080707f"
+                height="3"
+                width="3"
+                x="0"
+                y="0"
+              />
+              <rect
+                fill="#7080707f"
+                height="3"
+                width="3"
+                x="3"
+                y="3"
+              />
+            </pattern>
+            <circle
+              cx="12"
+              cy="12"
+              fill="url(#checkerboard)"
+              r="12"
+            />
+            <circle
+              cx="12"
+              cy="12"
+              r="12"
+            />
+          </svg>
+        </button>
+        <div
+          class="verte__menu-origin verte__menu-origin--bottom"
+        >
+          <div
+            class="verte__menu"
+            style="transform: translate(0px, 0px);"
+            tabindex="-1"
+          >
+            <button
+              class="verte__close"
+              type="button"
+            >
+              <svg
+                class="verte__icon verte__icon--small"
+                viewBox="0 0 24 24"
+              >
+                <title>
+                  Close Icon
+                </title>
+                <path
+                  d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z"
+                />
+              </svg>
+            </button>
+            <div
+              class="verte__draggable"
+            />
+            <div
+              class="verte-picker verte-picker--square"
+            >
+              <div
+                class="verte-picker__origin"
+              >
+                <canvas
+                  class="verte-picker__canvas"
+                  height="150"
+                  width="250"
+                />
+                <div
+                  class="verte-picker__cursor"
+                  style="transform: translate3d(0px, 0px, 0);"
+                />
+              </div>
+              <div
+                class="slider verte-picker__slider"
+              >
+                <div
+                  class="slider__track"
+                >
+                  <div
+                    class="slider__fill"
+                  />
+                  <div
+                    class="slider__handle"
+                    style="transform: translate(0px, 0); background-color: rgb(255, 0, 0);"
+                  >
+                    <!---->
+                  </div>
+                </div>
+                <input
+                  class="slider__input"
+                  style="display: none;"
+                  type="number"
+                />
+              </div>
+              <!---->
+            </div>
+            <div
+              class="verte__controller"
+            >
+              <div
+                class="slider"
+              >
+                <div
+                  class="slider__track"
+                >
+                  <div
+                    class="slider__fill"
+                  />
+                  <div
+                    class="slider__handle"
+                    style="transform: translate(0px, 0); background-color: rgba(255, 0, 255, 0);"
+                  >
+                    <!---->
+                  </div>
+                </div>
+                <input
+                  class="slider__input"
+                  style="display: none;"
+                  type="number"
+                />
+              </div>
+              <!---->
+              <div
+                class="verte__inputs"
+              >
+                <button
+                  class="verte__model"
+                  type="button"
+                >
+                  rgb
+                </button>
+                <!---->
+                <input
+                  class="verte__input"
+                  max="255"
+                  min="0"
+                  type="number"
+                />
+                <input
+                  class="verte__input"
+                  max="255"
+                  min="0"
+                  type="number"
+                />
+                <input
+                  class="verte__input"
+                  max="255"
+                  min="0"
+                  type="number"
+                />
+                <!---->
+                <button
+                  class="verte__submit"
+                  type="button"
+                >
+                  <title>
+                    Submit Icon
+                  </title>
+                  <svg
+                    class="verte__icon"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="verte__recent"
+              >
+                <a
+                  class="verte__recent-color"
+                  href="#"
+                  role="button"
+                  style="color: rgb(8, 43, 100);"
+                />
+                <a
+                  class="verte__recent-color"
+                  href="#"
+                  role="button"
+                  style="color: rgb(71, 173, 229);"
+                />
+                <a
+                  class="verte__recent-color"
+                  href="#"
+                  role="button"
+                  style="color: rgb(59, 85, 255);"
+                />
+                <a
+                  class="verte__recent-color"
+                  href="#"
+                  role="button"
+                  style="color: rgb(59, 210, 161);"
+                />
+                <a
+                  class="verte__recent-color"
+                  href="#"
+                  role="button"
+                  style="color: rgb(110, 139, 218);"
+                />
+                <a
+                  class="verte__recent-color"
+                  href="#"
+                  role="button"
+                  style="color: rgb(255, 108, 46);"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+       
+      <div
+        class="input-group col-lg-4 app__control"
+      >
+        <div
+          class="input-group-prepend"
+        >
+          <label
+            class="input-group-text"
+            for="color"
+          >
+            Color
+          </label>
+        </div>
+         
+        <input
+          class="form-control"
+          name="fontColor"
+          readonly="readonly"
+          type="text"
+        />
+      </div>
+       
+      <div
+        class="input-group col-lg-4 app__control"
+        role="group"
+      >
+        <div
+          class="input-group-prepend"
+        >
+          <div
+            class="input-group-text"
+          >
+            Font Size
+          </div>
+          <!---->
+        </div>
+        <input
+          class="custom-range"
+          id="__BVID__13"
+          max="50"
+          min="15"
+          name="fontSize"
+          style="flex-grow: 1; width: auto;"
+          type="range"
+        />
+        <!---->
+      </div>
+    </div>
+  </div>
+   
+  <div
+    class="app__canvas"
+  >
+    <canvas
+      id="canvas"
+    />
+  </div>
+   
+  <div
+    class="app__save"
+  >
+    <div
+      class="input-group col-lg-6 app__control"
+      role="group"
+    >
+      <!---->
+      <select
+        class="custom-select"
+        id="__BVID__14"
+        name="mimeType"
+      >
+        <option
+          disabled="disabled"
+          value=""
+        >
+          Choose...
+        </option>
+        <option
+          value="image/jpeg"
+        >
+          JPG
+        </option>
+        <option
+          value="image/png"
+        >
+          PNG
+        </option>
+        <option
+          value="image/gif"
+        >
+          GIF
+        </option>
+      </select>
+      <div
+        class="input-group-append"
+      >
+        <!---->
+        <button
+          class="btn btn-info"
+          name="save"
+          type="button"
+        >
+          Save As
+        </button>
+      </div>
+    </div>
+  </div>
+   
+  <div
+    class="app__results"
+  >
+    <div
+      class="row"
+    />
+  </div>
+</div>
+`;
