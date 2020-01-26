@@ -38,7 +38,6 @@ describe('MemeGen.vue', () => {
 
   const onFileChangeHandler = jest.fn();
   const onSaveHandler = jest.fn();
-  const onDeleteHandler = jest.fn();
   const render = jest.fn();
 
   beforeEach(() => {
@@ -48,7 +47,6 @@ describe('MemeGen.vue', () => {
       methods: {
         onFileChangeHandler,
         onSaveHandler,
-        onDeleteHandler,
         render,
       },
     });
@@ -58,6 +56,14 @@ describe('MemeGen.vue', () => {
 
   it('matches snapshot', () => {
     expect(wrapper.element).toMatchSnapshot();
+  });
+
+  it('returnes canvas element from canvasElement computed property', () => {
+    expect(wrapper.vm.canvasElement).toBe(wrapper.find({ ref: 'canvas' }).element);
+  });
+
+  it('returnes 2d context of canvas element from canvasContext computed property', () => {
+    expect(wrapper.vm.canvasContext.canvas).toBe(wrapper.find({ ref: 'canvas' }).element);
   });
 
   describe('File input element', () => {
@@ -197,6 +203,14 @@ describe('MemeGen.vue', () => {
       expect(wrapper.find({ ref: 'verte' }).exists()).toBe(true);
     });
 
+    it('shows up on click', () => {
+      const previousState = wrapper.find({ ref: 'verte' }).vm.isMenuActive;
+
+      wrapper.find('[name="fontColor"]').trigger('click');
+
+      expect(wrapper.find({ ref: 'verte' }).vm.isMenuActive).toBe(!previousState);
+    });
+
     it('updates corresponding model property', async () => {
       const newValue = 'rgb(255,255,255)';
 
@@ -273,10 +287,14 @@ describe('MemeGen.vue', () => {
         expect(wrapper.find('.app__results .row .col-md-4 .btn-danger').exists()).toBe(true);
       });
 
-      it('triggers onDeleteHandler() method', () => {
-        wrapper.find('.app__results .row .col-md-4 .btn-danger').trigger('click');
+      it('deletes corresponding element on click', async () => {
+        wrapper.find('.app__results .row .col-md-4 .btn-danger').trigger('click', 0);
 
-        expect(onSaveHandler).toBeCalled();
+        await wrapper.vm.$nextTick();
+
+        expect(wrapper.findAll('.app__results .row .col-md-4 .btn-danger').length).toBe(
+          wrapper.vm.$data.results.length,
+        );
       });
     });
   });

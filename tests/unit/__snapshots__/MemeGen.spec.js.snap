@@ -332,46 +332,7 @@ exports[`MemeGen.vue matches snapshot 1`] = `
                   </svg>
                 </button>
               </div>
-              <div
-                class="verte__recent"
-              >
-                <a
-                  class="verte__recent-color"
-                  href="#"
-                  role="button"
-                  style="color: rgb(8, 43, 100);"
-                />
-                <a
-                  class="verte__recent-color"
-                  href="#"
-                  role="button"
-                  style="color: rgb(71, 173, 229);"
-                />
-                <a
-                  class="verte__recent-color"
-                  href="#"
-                  role="button"
-                  style="color: rgb(59, 85, 255);"
-                />
-                <a
-                  class="verte__recent-color"
-                  href="#"
-                  role="button"
-                  style="color: rgb(59, 210, 161);"
-                />
-                <a
-                  class="verte__recent-color"
-                  href="#"
-                  role="button"
-                  style="color: rgb(110, 139, 218);"
-                />
-                <a
-                  class="verte__recent-color"
-                  href="#"
-                  role="button"
-                  style="color: rgb(255, 108, 46);"
-                />
-              </div>
+              <!---->
             </div>
           </div>
         </div>

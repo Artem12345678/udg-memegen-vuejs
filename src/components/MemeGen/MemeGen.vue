@@ -27,7 +27,14 @@
           <b-form-select v-model="fontFamily" :options="fontFamilyOptions" name="fontFamily" />
         </b-input-group>
 
-        <verte ref="verte" value="#f0f" @input="fontColor = $event" picker="square" model="rgb" />
+        <verte
+          ref="verte"
+          value="#f0f"
+          @input="fontColor = $event"
+          picker="square"
+          model="rgb"
+          :show-history="false"
+        />
         <div class="input-group col-lg-4 app__control">
           <div class="input-group-prepend">
             <label class="input-group-text" for="color">Color</label>
